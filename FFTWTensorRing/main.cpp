@@ -7,6 +7,8 @@
 #include <string.h>
 
 #define N 16384
+//#define N 32768
+//#define N 131072
 
 void init_f(double* p, int power, bool powerOf2) {
     for (int i = 0; i < N; i++) p[i] = 0.0;
@@ -190,8 +192,13 @@ int read_poly_to_fftw(const char* filename, double* f, int max_len) {
 }
 
 int main() {
-    int q0 = 4, q1 = 41, q2 = 73, q = q0*q1*q2;
-    const char* filename = "11972.txt";
+    //int q0 = 4, q1 = 17, q2 = 241;  const char* filename = "16388.txt";  //#define N 32768
+    //int q0 = 4, q1 = 17, q2 = 433;  const char* filename = "29444.txt";  //#define N 32768
+    int q0 = 4, q1 = 41, q2 = 73;  const char* filename = "11972.txt";  //#define N 16384
+    //int q0 = 4, q1 = 73, q2 = 97;  const char* filename = "28324.txt";  //#define N 32768
+    //int q0 = 4, q1 = 97, q2 = 193;  const char* filename = "74884.txt";  //#define N 131072
+
+    
     double* a = fftw_alloc_real(N);
     double* b = fftw_alloc_real(N);
     double* c = fftw_alloc_real(N);
