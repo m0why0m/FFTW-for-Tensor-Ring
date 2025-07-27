@@ -27,4 +27,5 @@ libfftw3-3.lib
 \`
 
 > **Note:** The above instructions also apply to the `fftw3l` and `fftw3f` versions of the library.
-> **Note:**This code is associated with the paper (TensorAFBS) submitted by Asiacrypt 2025, which in order to verify the correctness of polynomial multiplication over the tensor ring using the FFTW library.
+
+> This code is associated with the paper (TensorAFBS) submitted by Asiacrypt 2025, which in order to verify the correctness of polynomial multiplication over the tensor ring using the FFTW library.
